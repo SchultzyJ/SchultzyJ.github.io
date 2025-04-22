@@ -1,0 +1,790 @@
+<!DOCTYPE html><html lang="en">
+  <head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Phonelines - Mental Health Online</title>
+
+<meta name="description" content="">
+<link rel="canonical" href="/2025/04/18/phonelines.html"><link rel="alternate" type="application/rss+xml" title="Mental Health Online" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+
+<meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
+
+<meta name="theme-color" content="#ffffff">
+<!-- end favicons snippet --><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" ><!-- start custom head snippets -->
+
+<!-- end custom head snippets -->
+<script>(function() {
+  window.isArray = function(val) {
+    return Object.prototype.toString.call(val) === '[object Array]';
+  };
+  window.isString = function(val) {
+    return typeof val === 'string';
+  };
+
+  window.hasEvent = function(event) {
+    return 'on'.concat(event) in window.document;
+  };
+
+  window.isOverallScroller = function(node) {
+    return node === document.documentElement || node === document.body || node === window;
+  };
+
+  window.isFormElement = function(node) {
+    var tagName = node.tagName;
+    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
+  };
+
+  window.pageLoad = (function () {
+    var loaded = false, cbs = [];
+    window.addEventListener('load', function () {
+      var i;
+      loaded = true;
+      if (cbs.length > 0) {
+        for (i = 0; i < cbs.length; i++) {
+          cbs[i]();
+        }
+      }
+    });
+    return {
+      then: function(cb) {
+        cb && (loaded ? cb() : (cbs.push(cb)));
+      }
+    };
+  })();
+})();
+(function() {
+  window.throttle = function(func, wait) {
+    var args, result, thisArg, timeoutId, lastCalled = 0;
+
+    function trailingCall() {
+      lastCalled = new Date;
+      timeoutId = null;
+      result = func.apply(thisArg, args);
+    }
+    return function() {
+      var now = new Date,
+        remaining = wait - (now - lastCalled);
+
+      args = arguments;
+      thisArg = this;
+
+      if (remaining <= 0) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+        lastCalled = now;
+        result = func.apply(thisArg, args);
+      } else if (!timeoutId) {
+        timeoutId = setTimeout(trailingCall, remaining);
+      }
+      return result;
+    };
+  };
+})();
+(function() {
+  var Set = (function() {
+    var add = function(item) {
+      var i, data = this._data;
+      for (i = 0; i < data.length; i++) {
+        if (data[i] === item) {
+          return;
+        }
+      }
+      this.size ++;
+      data.push(item);
+      return data;
+    };
+
+    var Set = function(data) {
+      this.size = 0;
+      this._data = [];
+      var i;
+      if (data.length > 0) {
+        for (i = 0; i < data.length; i++) {
+          add.call(this, data[i]);
+        }
+      }
+    };
+    Set.prototype.add = add;
+    Set.prototype.get = function(index) { return this._data[index]; };
+    Set.prototype.has = function(item) {
+      var i, data = this._data;
+      for (i = 0; i < data.length; i++) {
+        if (this.get(i) === item) {
+          return true;
+        }
+      }
+      return false;
+    };
+    Set.prototype.is = function(map) {
+      if (map._data.length !== this._data.length) { return false; }
+      var i, j, flag, tData = this._data, mData = map._data;
+      for (i = 0; i < tData.length; i++) {
+        for (flag = false, j = 0; j < mData.length; j++) {
+          if (tData[i] === mData[j]) {
+            flag = true;
+            break;
+          }
+        }
+        if (!flag) { return false; }
+      }
+      return true;
+    };
+    Set.prototype.values = function() {
+      return this._data;
+    };
+    return Set;
+  })();
+
+  window.Lazyload = (function(doc) {
+    var queue = {js: [], css: []}, sources = {js: {}, css: {}}, context = this;
+    var createNode = function(name, attrs) {
+      var node = doc.createElement(name), attr;
+      for (attr in attrs) {
+        if (attrs.hasOwnProperty(attr)) {
+          node.setAttribute(attr, attrs[attr]);
+        }
+      }
+      return node;
+    };
+    var end = function(type, url) {
+      var s, q, qi, cbs, i, j, cur, val, flag;
+      if (type === 'js' || type ==='css') {
+        s = sources[type], q = queue[type];
+        s[url] = true;
+        for (i = 0; i < q.length; i++) {
+          cur = q[i];
+          if (cur.urls.has(url)) {
+            qi = cur, val = qi.urls.values();
+            qi && (cbs = qi.callbacks);
+            for (flag = true, j = 0; j < val.length; j++) {
+              cur = val[j];
+              if (!s[cur]) {
+                flag = false;
+              }
+            }
+            if (flag && cbs && cbs.length > 0) {
+              for (j = 0; j < cbs.length; j++) {
+                cbs[j].call(context);
+              }
+              qi.load = true;
+            }
+          }
+        }
+      }
+    };
+    var load = function(type, urls, callback) {
+      var s, q, qi, node, i, cur,
+        _urls = typeof urls === 'string' ? new Set([urls]) : new Set(urls), val, url;
+      if (type === 'js' || type ==='css') {
+        s = sources[type], q = queue[type];
+        for (i = 0; i < q.length; i++) {
+          cur = q[i];
+          if (_urls.is(cur.urls)) {
+            qi = cur;
+            break;
+          }
+        }
+        val = _urls.values();
+        if (qi) {
+          callback && (qi.load || qi.callbacks.push(callback));
+          callback && (qi.load && callback());
+        } else {
+          q.push({
+            urls: _urls,
+            callbacks: callback ? [callback] : [],
+            load: false
+          });
+          for (i = 0; i < val.length; i++) {
+            node = null, url = val[i];
+            if (s[url] === undefined) {
+              (type === 'js' ) && (node = createNode('script', { src: url }));
+              (type === 'css') && (node = createNode('link', { rel: 'stylesheet', href: url }));
+              if (node) {
+                node.onload = (function(type, url) {
+                  return function() {
+                    end(type, url);
+                  };
+                })(type, url);
+                (doc.head || doc.body).appendChild(node);
+                s[url] = false;
+              }
+            }
+          }
+        }
+      }
+    };
+    return {
+      js: function(url, callback) {
+        load('js', url, callback);
+      },
+      css: function(url, callback) {
+        load('css', url, callback);
+      }
+    };
+  })(this.document);
+})();
+</script><script>
+  (function() {
+    var TEXT_VARIABLES = {
+      version: '2.2.6',
+      sources: {
+        font_awesome: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css',
+        jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
+        leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js',
+        chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
+        gitalk: {
+          js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
+          css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
+        },
+        valine: 'https://unpkg.com/valine/dist/Valine.min.js',
+        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
+        mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
+      },
+      site: {
+        toc: {
+          selectors: 'h1,h2,h3'
+        }
+      },
+      paths: {
+        search_js: '/assets/search.js'
+      }
+    };
+    window.TEXT_VARIABLES = TEXT_VARIABLES;
+  })();
+</script>
+</head>
+  <body>
+    <div class="root" data-is-touch="false">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
+
+      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
+      <div class="header__title">
+        <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24">
+<style type="text/css">
+	.st0{fill:#515151;}
+</style>
+<path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
+	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
+</svg>
+<a title="Change?? awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." href="/">Mental Health Online</a></div></div><nav class="navigation">
+        <ul><li class="navigation__item"><a href="/2025/04/18/what-services-for-me.html">What to choose?</a></li><li class="navigation__item navigation__item--active"><a href="/2025/04/18/phonelines.html">Phonelines</a></li><li class="navigation__item"><a href="/2025/04/18/professional-locators.html">Professionals</a></li><li class="navigation__item"><a href="/2025/04/18/other-resources.html">Other Resources</a></li><li class="navigation__item"><a href="/archive.html">Archive</a></li><li class="navigation__item"><a href="/about.html">About</a></li></ul>
+      </nav></div>
+  </header>
+</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
+
+              <div class="col-aside d-print-none js-col-aside"></div>
+
+              <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
+
+<!-- end custom main top snippet -->
+<article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Phonelines</h1></header></div><meta itemprop="headline" content="Phonelines"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Apr 18, 2025</span>
+            </li></ul></div><meta itemprop="datePublished" content="2025-04-18T00:00:00-05:00"><div class="js-article-content"><style>
+  .hero-example--linear-gradient {
+    background-image: linear-gradient(135deg, rgba(60, 170, 60, .8), rgba(20, 255, 50, .4)), url("path-to-image");
+  }
+</style>
+
+<div class="hero hero--dark hero-example--linear-gradient">
+  <div class="hero__content">
+    <h3>Phone lines, Hotlines, and Coldlines</h3>
+  </div>
+</div>
+
+<h2 id="who-you-gonna-call">Who you gonna call?</h2>
+<h6 id="a-health-professional-probably"><em>A health professional, probably!</em></h6>
+<hr />
+
+<p>Mental health phone lines are both national and local services provided by liscened counselors and volunteers alike,
+to provide immediate (or near immediate) mental health support. Phonelines are generally broken up into two categories: <strong>Warmlines</strong> and <strong>Hotlines.</strong> <br />
+<br /></p>
+
+<h4 id="crisis-hotlines">Crisis Hotlines</h4>
+<p>Hotlines are phonelines that primarily operate to keep you safe and connect you with resources in moments of crisis.
+Many of these are nation-wide, free, confidential, and available 24/7. For instance, the <a href="https://988lifeline.org/get-help/what-to-expect/">988 Suicide &amp; Crisis Lifeline</a>
+provides support 24/7, nation-wide, for a wide range of mental health struggles.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Additionally, there are also hotlines that
+specialize in specific content areas. (Find out more below!)
+<br /><br /></p>
+<h4 id="warmlines">Warmlines</h4>
+<p>Warmlines, unlike hotlines, are built primarily to allow you to talk with someone for mental health support. 
+However, these absolutely can still be used in moments of crisis.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
+
+<p>Warmline volunteers are not always licensed counselors;<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> sometimes, it may be community members or
+volunteers trained as empathetic listeners, ready to provide peer support. 
+It’s important to note these services are not always 24/7, and are more likely to be local, rather than national. 
+(Find out more below!)</p>
+
+<p>If you would like someone to talk to, but don’t find yourself in crisis, warmlines can be a great place to get some help!</p>
+
+<p><br /></p>
+
+<h3 id="find-hotlines-and-warmlines-today">Find Hotlines and Warmlines today:</h3>
+<hr />
+<h6 id="note-that-these-lists-will-not-be-exhaustive-or-cover-every-issue-if-you-have-suggestions-or-concerns-contact-me"><em>(Note that these lists will not be exhaustive or cover every issue. If you have suggestions or concerns, <a href="/about.html/">contact me.</a>)</em></h6>
+<p>Below are several national phonelines to call for various issues, both hotlines and warmlines. However, you may have phonelines local to your state or area.
+If you’d like to find more about those, you can check out:</p>
+
+<ul>
+  <li><em><a href="https://www.warmline.org/#directory">Warmlines Locator</a>:</em> <strong>Click on link provided</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Warmline(s)<br />Information varies by service and state</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://www.nami.org/wp-content/uploads/2025/04/Warmline-Directory-as-of-April-11-2025.pdf">National Alliance on Mental Illness’ Warmline Directory</a>:</em> <strong>Click on link provided</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Warmline(s)<br />Information varies by service and state</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://childhelphotline.org/">Childhelp National Child Abuse Hotline</a>:</em> <strong>(800) 422-4453</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline<br />[Description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://www.crisistextline.org/">Crisis Text Line</a>:</em> <strong>Text HOME to 741741</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Textline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://www.samhsa.gov/find-help/helplines/disaster-distress-helpline#:~:text=This%20toll-free%2C%20multilingual%2C,-5990%20presiona%20“2.”">Disaster Distress Helpline</a>:</em> <strong>Call or Text 1-800-985-5990</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline and Textline<br /><strong>Languages: </strong>Multilingual, over 100 languages
+<br />Para español, lama o envía un mensaje de texto 1-800-985-5990 presiona 2.
+<br />For Deaf/Hard of Hearing individuals, text or call 1-800-985-5990 using your preferred Relay provider, or <a href="https://www.vibrant.org/wp-content/uploads/2021/04/DDH-VP_Infosheet.pdf">find out more by clicking on this link.</a>
+<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://gamblersanonymous.org/u-s-hotlines/">Gamblers Anonymous</a>:</em> <strong>Find local hotlines at link</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://988lifeline.org/es/servicios-en-espanol/">Nacional de Prevención del Suicidio</a>:</em> <strong>(888) 628-9454</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://www.thehotline.org/">National Domestic Violence Hotline</a>:</em> <strong>(800) 799-7233</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://gradresources.org/crisis/">National Grad Crisis Line</a>:</em> <strong>(877) 472-3457</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://humantraffickinghotline.org/">National Human Trafficking Hotline</a>:</em> <strong>888-373-7888</strong> or <strong>Text HELP to 233733 (BEFREE)</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline and Textline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://rainn.org">National Sexual Assault Hotline</a>:</em> <strong>(800) 656-4673</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://988lifeline.org/">National Suicide and Crisis Lifeline</a>:</em> <strong>988</strong> or <strong><a href="https://988lifeline.org/chat/">Chat online</a></strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline and Textline
+<br />For Deaf/Hard of Hearing individuals, use your preferred relay service or dial 711 then 988 or <a href="https://988lifeline.org/chat/">Chat online</a>
+<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://doa.vi.gov/sage-vi-updates/">SAgE’s Farmer Support Hotline</a>:</em> <strong>833-381-SAGE</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://www.samhsa.gov/find-help/national-helpline">Substance Abuse and Mental Health Services Administration National Helpline</a>:</em> <strong>(800) 662-4357</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://www.stevefund.org/crisistextline/">The Steve Fund</a>:</em> <strong>Text ‘STEVE’ to 741741</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Textline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://www.thetrevorproject.org/">The Trevor Project</a>:</em> <strong>1-866-488-7386</strong> or <strong>Text ‘START’ to 678-678</strong> or <strong><a href="https://www.thetrevorproject.org/get-help/">Message online</a></strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline/Warmline and Textline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://translifeline.org">Trans Lifeline</a>:</em> <strong>877-565-8860</strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li><em><a href="https://www.veteranscrisisline.net/">Veterans Crisis Line</a>:</em> <strong>988, then press 1</strong> or <strong>Text 838255</strong> or <strong><a href="https://www.veteranscrisisline.net/get-help/chat">Chat online</a></strong></li>
+</ul>
+<div class="mx-3"><em><strong>Type: </strong>Hotline and Textline<br />[Brief description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<p><br /></p>
+
+<hr />
+<h6 id="references">References</h6>
+<h2 id="format-later">FORMAT LATER</h2>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://988lifeline.org">988lifeline.org</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://screening.mhanational.org/content/need-talk-someone-warmlines/?layout=mhats,mhats4a">Mental Health America, <em>Need to talk to someone?</em></a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://www.psychiatry.org/news-room/apa-blogs/warm-lines-providing-help-before-a-crisis-develops#:~:text=A%20warm%20line%20is%20a,country%2C%20they%20are%20not%20uniform">APA, <em>Warm Lines: Providing Help Before a Crisis Develops</em></a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+
+<!-- end custom main bottom snippet -->
+</div>
+            </div></div></div><div class="page__footer d-print-none">
+<footer class="footer py-4 js-page-footer">
+  <div class="main"><div itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content=""><meta itemprop="url" content="/"><div class="footer__author-links"><div class="author-links">
+  <ul class="menu menu--nowrap menu--inline"></ul>
+</div>
+</div>
+    </div><div class="site-info mt-2">
+      <div>© Mental Health Online 2021,
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      </div>
+    </div>
+  </div>
+</footer>
+</div></div>
+    </div><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $body = $('body'), $window = $(window);
+    var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
+    var activeCount = 0;
+    function modal(options) {
+      var $root = this, visible, onChange, hideWhenWindowScroll = false;
+      var scrollTop;
+      function setOptions(options) {
+        var _options = options || {};
+        visible = _options.initialVisible === undefined ? false : show;
+        onChange = _options.onChange;
+        hideWhenWindowScroll = _options.hideWhenWindowScroll;
+      }
+      function init() {
+        setState(visible);
+      }
+      function setState(isShow) {
+        if (isShow === visible) {
+          return;
+        }
+        visible = isShow;
+        if (visible) {
+          activeCount++;
+          scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+          $root.addClass('modal--show');
+          $pageMain.scrollTop(scrollTop);
+          activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.on('scroll', hide);
+          $window.on('keyup', handleKeyup);
+        } else {
+          activeCount > 0 && activeCount--;
+          $root.removeClass('modal--show');
+          $window.scrollTop(scrollTop);
+          activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.off('scroll', hide);
+          $window.off('keyup', handleKeyup);
+        }
+        onChange && onChange(visible);
+      }
+      function show() {
+        setState(true);
+      }
+      function hide() {
+        setState(false);
+      }
+      function handleKeyup(e) {
+        // Char Code: 27  ESC
+        if (e.which ===  27) {
+          hide();
+        }
+      }
+      setOptions(options);
+      init();
+      return {
+        show: show,
+        hide: hide,
+        $el: $root
+      };
+    }
+    $.fn.modal = modal;
+  });
+})();
+</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"></div></div>
+
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    function scrollToAnchor(anchor, duration, callback) {
+      var $root = this;
+      $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
+        window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
+        callback && callback();
+      });
+    }
+    $.fn.scrollToAnchor = scrollToAnchor;
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    function affix(options) {
+      var $root = this, $window = $(window), $scrollTarget, $scroll,
+        offsetBottom = 0, scrollTarget = window, scroll = window.document, disabled = false, isOverallScroller = true,
+        rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop,
+        hasInit = false, curState;
+
+      function setOptions(options) {
+        var _options = options || {};
+        _options.offsetBottom && (offsetBottom = _options.offsetBottom);
+        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+        _options.scroll && (scroll = _options.scroll);
+        _options.disabled !== undefined && (disabled = _options.disabled);
+        $scrollTarget = $(scrollTarget);
+        isOverallScroller = window.isOverallScroller($scrollTarget[0]);
+        $scroll = $(scroll);
+      }
+      function preCalc() {
+        top();
+        rootHeight = $root.outerHeight();
+        rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
+        rootLeft = $root.offset().left;
+      }
+      function calc(needPreCalc) {
+        needPreCalc && preCalc();
+        scrollBottom = $scroll.outerHeight() - offsetBottom - rootHeight;
+        rootBottomTop = scrollBottom - rootTop;
+      }
+      function top() {
+        if (curState !== 'top') {
+          $root.removeClass('fixed').css({
+            left: 0,
+            top: 0
+          });
+          curState = 'top';
+        }
+      }
+      function fixed() {
+        if (curState !== 'fixed') {
+          $root.addClass('fixed').css({
+            left: rootLeft + 'px',
+            top: 0
+          });
+          curState = 'fixed';
+        }
+      }
+      function bottom() {
+        if (curState !== 'bottom') {
+          $root.removeClass('fixed').css({
+            left: 0,
+            top: rootBottomTop + 'px'
+          });
+          curState = 'bottom';
+        }
+      }
+      function setState() {
+        var scrollTop = $scrollTarget.scrollTop();
+        if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
+          fixed();
+        } else if (scrollTop < rootTop) {
+          top();
+        } else {
+          bottom();
+        }
+      }
+      function init() {
+        if(!hasInit) {
+          var interval, timeout;
+          calc(true); setState();
+          // run calc every 100 millisecond
+          interval = setInterval(function() {
+            calc();
+          }, 100);
+          timeout = setTimeout(function() {
+            clearInterval(interval);
+          }, 45000);
+          window.pageLoad.then(function() {
+            setTimeout(function() {
+              clearInterval(interval);
+              clearTimeout(timeout);
+            }, 3000);
+          });
+          $scrollTarget.on('scroll', function() {
+            disabled || setState();
+          });
+          $window.on('resize', function() {
+            disabled || (calc(true), setState());
+          });
+          hasInit = true;
+        }
+      }
+
+      setOptions(options);
+      if (!disabled) {
+        init();
+      }
+      $window.on('resize', window.throttle(function() {
+        init();
+      }, 200));
+      return {
+        setOptions: setOptions,
+        refresh: function() {
+          calc(true, { animation: false }); setState();
+        }
+      };
+    }
+    $.fn.affix = affix;
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    function toc(options) {
+      var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="toc toc--ellipsis"></ul>'), $tocLi, $headings, $activeLast, $activeCur,
+        selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
+        headingsPos, scrolling = false, hasRendered = false, hasInit = false;
+
+      function setOptions(options) {
+        var _options = options || {};
+        _options.selectors && (selectors = _options.selectors);
+        _options.container && (container = _options.container);
+        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+        _options.scroller && (scroller = _options.scroller);
+        _options.disabled !== undefined && (disabled = _options.disabled);
+        $headings = $(container).find(selectors).filter('[id]');
+        $scrollTarget = $(scrollTarget);
+        $scroller = $(scroller);
+      }
+      function calc() {
+        headingsPos = [];
+        $headings.each(function() {
+          headingsPos.push(Math.floor($(this).position().top));
+        });
+      }
+      function setState(element, disabled) {
+        var scrollTop = $scrollTarget.scrollTop(), i;
+        if (disabled || !headingsPos || headingsPos.length < 1) { return; }
+        if (element) {
+          $activeCur = element;
+        } else {
+          for (i = 0; i < headingsPos.length; i++) {
+            if (scrollTop >= headingsPos[i]) {
+              $activeCur = $tocLi.eq(i);
+            } else {
+              $activeCur || ($activeCur = $tocLi.eq(i));
+              break;
+            }
+          }
+        }
+        $activeLast && $activeLast.removeClass('active');
+        ($activeLast = $activeCur).addClass('active');
+      }
+      function render() {
+        if(!hasRendered) {
+          $root.append($tocUl);
+          $headings.each(function() {
+            var $this = $(this);
+            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+              .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
+          });
+          $tocLi = $tocUl.children('li');
+          $tocUl.on('click', 'a', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            scrolling = true;
+            setState($this.parent());
+            $scroller.scrollToAnchor($this.attr('href'), 400, function() {
+              scrolling = false;
+            });
+          });
+        }
+        hasRendered = true;
+      }
+      function init() {
+        var interval, timeout;
+        if(!hasInit) {
+          render(); calc(); setState(null, scrolling);
+          // run calc every 100 millisecond
+          interval = setInterval(function() {
+            calc();
+          }, 100);
+          timeout = setTimeout(function() {
+            clearInterval(interval);
+          }, 45000);
+          window.pageLoad.then(function() {
+            setTimeout(function() {
+              clearInterval(interval);
+              clearTimeout(timeout);
+            }, 3000);
+          });
+          $scrollTarget.on('scroll', function() {
+            disabled || setState(null, scrolling);
+          });
+          $window.on('resize', window.throttle(function() {
+            if (!disabled) {
+              render(); calc(); setState(null, scrolling);
+            }
+          }, 100));
+        }
+        hasInit = true;
+      }
+
+      setOptions(options);
+      if (!disabled) {
+        init();
+      }
+      $window.on('resize', window.throttle(function() {
+        init();
+      }, 200));
+      return {
+        setOptions: setOptions
+      };
+    }
+    $.fn.toc = toc;
+  });
+})();
+/*(function () {
+
+})();*/
+</script>
+    </div>
+    <script>(function () {
+  var $root = document.getElementsByClassName('root')[0];
+  if (window.hasEvent('touchstart')) {
+    $root.dataset.isTouch = true;
+    document.addEventListener('touchstart', function(){}, false);
+  }
+})();
+</script>
+  </body>
+</html>
+
