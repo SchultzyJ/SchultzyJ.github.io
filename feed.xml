@@ -1,13 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-04-22T10:26:54-05:00</updated><id>/feed.xml</id><title type="html">Mental Health Online</title><subtitle>Change?? awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How do I know what works for me?</title><link href="/2025/04/18/what-services-for-me.html" rel="alternate" type="text/html" title="How do I know what works for me?" /><published>2025-04-18T00:00:00-05:00</published><updated>2025-04-18T00:00:00-05:00</updated><id>/2025/04/18/what-services-for-me</id><content type="html" xml:base="/2025/04/18/what-services-for-me.html"><![CDATA[<p><strong>Great question!</strong> Ultimately, that <em>will</em> come down to you–your circumstances, your needs, your preferences.
-I can’t make that decision for you, but I can try to answer questions you might have.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-05-03T19:46:06-05:00</updated><id>/feed.xml</id><title type="html">Mental Health Online</title><subtitle>Change?? awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Web-based Interventions</title><link href="/2025/04/30/web-interventions.html" rel="alternate" type="text/html" title="Web-based Interventions" /><published>2025-04-30T00:00:00-05:00</published><updated>2025-04-30T00:00:00-05:00</updated><id>/2025/04/30/web-interventions</id><content type="html" xml:base="/2025/04/30/web-interventions.html"><![CDATA[<style>
+  .hero-example--linear-gradient {
+    background-image: linear-gradient(135deg, rgba(0, 160, 255, .8), rgba(0, 150, 215, .2)), url("path-to-image");
+  }
+</style>
 
-<p>While much of the discussion around mental health services may be therapy, there are other services that may be benefit you: phone lines, web-based interventions (such as apps), <strong>__</strong>.</p>
+<div class="hero hero--dark hero-example--linear-gradient">
+  <div class="hero__content">
+    <h3>Adapting with Technology</h3>
+  </div>
+</div>
 
-<p><img class="image image--xl" src="https://cdn.pixabay.com/photo/2016/11/29/08/51/city-1868530_1280.jpg" /></p>
-
-<h2 id="in-person-vs-virtual-therapy">In-person vs Virtual Therapy</h2>
+<h4 id="benefits-of-online-interventions">Benefits of online interventions</h4>
 <hr />
-<p>A common question I hear is, <strong>“Is virtual therapy as effective as in-person therapy?”</strong></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Great question! Ultimately, that will come down to you–your circumstances, your needs, your preferences. I can’t make that decision for you, but I can try to answer questions you might have.]]></summary></entry><entry><title type="html">Connecting with Mental Health Professionals</title><link href="/2025/04/18/professional-locators.html" rel="alternate" type="text/html" title="Connecting with Mental Health Professionals" /><published>2025-04-18T00:00:00-05:00</published><updated>2025-04-18T00:00:00-05:00</updated><id>/2025/04/18/professional-locators</id><content type="html" xml:base="/2025/04/18/professional-locators.html"><![CDATA[<style>
+<p><strong>Web-based interventions come in many shapes and sizes:</strong> meditation apps, internet-guided therapy, self-help educational serivices,
+skills-based therapy apps, and more! They can be made for a more general audience, or more niche for specific needs within
+specific populations.</p>
+
+<p>The primary benefit of these services is that they’re incredibly accessible, being that they’re available immediately and 24/7,
+and generally cheaper than traditional therapy (even free in some cases). Research shows that some web-based interventions 
+and internet guided therapies can be <strong>effective at reducing stress</strong> <a href="https://www.jmir.org/2017/2/e32/">(Heber et al., 2017)</a>
+and <strong>share similar outcomes to face-to-face psychotherapy <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3918007/">(Andersson &amp; Titov, 2014)</a>!</strong></p>
+
+<p>Generally, web-based interventions can be used to supplement other mental health services (such as traditional therapy),
+but can be beneficial even when used in isolation.</p>
+
+<p><br /></p>
+<h3 id="web-based-interventions">Web-based Interventions:</h3>
+<hr />
+<h6 id="note-that-these-lists-will-not-be-exhaustive-or-cover-every-issue-if-you-have-suggestions-or-concerns-contact-me"><em>(Note that these lists will not be exhaustive or cover every issue. If you have suggestions or concerns, <a href="/about.html/">contact me.</a>)</em></h6>
+
+<ul>
+  <li>
+    <h5 id="headspace-meditation--sleep"><em><a href="https://www.headspace.com">Headspace: Meditation &amp; Sleep</a></em></h5>
+  </li>
+</ul>
+<div class="mx-3"><em>Headspace is a mental health and meditation-focused app. While their primary focus is targeting 
+stress, anxiety, and sleep through evidence-based meditation and mindfulness practices, they also cover other topics.
+<br /><strong>Available on:
+<a href="https://apps.apple.com/us/app/headspace-meditation-sleep/id493145008">Apple Appstore</a> (4.8 stars),
+<a href="https://play.google.com/store/apps/details?id=com.getsomeheadspace.android&amp;hl=en_US&amp;pli=1">Google Play</a> (4.4 stars),</strong> and
+<strong><a href="https://www.headspace.com/?gad_source=1&amp;gclid=Cj0KCQjw_dbABhC5ARIsAAh2Z-S1IuSj2yCnI9I3SGl2EFEKazdbAYjA4A9MfcBxkWRj_-9Mn_FdWCQaAsZEEALw_wcB">Online Web Browser</a></strong>
+<br /><strong>Price: </strong> $69.99 annually ($5.83/mo) or $12.99 monthly
+<br />Free trial options available; 14 days with annual membership, and 7 days with monthly membership.</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<p><br /></p>
+<ul>
+  <li><em><a href="https://www.thinkwithclarity.com">Clarity: CBT Self Help Journal</a></em></li>
+</ul>
+<div class="mx-3"><em>Clarity is a self-help journal with lessons and guidance on developing therapeutic skills to target
+common mental health concerns, like Anxiety, Depression, and ADHD. Clarity integrates therapeutic practices from Cognitive Behavioral Therapy (CBT), 
+as well as other models like Dialectrical Behavior Therapy (DBT), Acceptance and Commitment Therapy (ACT), and more.
+<br /><strong>Available on:
+<a href="https://apps.apple.com/us/app/clarity-cbt-self-help-journal/id1010391170">Apple Appstore</a> (4.8 stars),</strong> and
+<strong><a href="https://play.google.com/store/apps/details?id=com.moodtools.cbtassistant.app&amp;hl=en_US">Google Play</a> (3.8 stars)</strong>
+<br /><strong>Price: </strong> Basic app services are FREE! However, there is a paid "pro version" available for $59.99/year ($4.99/mo)
+<br />7 day free trial available.</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<p><br /></p>
+<ul>
+  <li><em><a href="https://togetherall.com/en-us/">Togetherall</a></em></li>
+</ul>
+<div class="mx-3"><em> Togetherall is a service that provides a "diverse and safe online community" for people to share their
+feelings and support other community members. It provides resources and peer-to-peer support to address a range of mental health topics.
+<br /><strong>Available primarily on </strong>
+<a href="https://togetherall.com/en-us/">their website,</a> both on laptop and mobile phones. 
+<br /><strong>Price: </strong> FREE, but you must be eligible through your university, insurance, or other institutions. 
+<br /><a href="https://account.v2.togetherall.com/register/unknown">Find out if you qualify here.</a></em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<hr />
+<h6 id="references"><em>References</em></h6>
+<p>Andersson, G., &amp; Titov, N. (2014, February). <em>Advantages and limitations of internet-based interventions for common mental disorders.</em> World psychiatry: official journal of the World Psychiatric Association (WPA). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3918007/">https://pmc.ncbi.nlm.nih.gov/articles/PMC3918007/</a></p>
+
+<p>Heber, E., Ebert, D. D., Lehr, D., Cuijpers, P., Berking, M., Nobis, S., &amp; Riper, H. (2017). The benefit of web- and computer-based interventions for stress: A systematic review and meta-analysis. <em>Journal of Medical Internet Research, 19</em>(2). <a href="https://doi.org/10.2196/jmir.5774">https://doi.org/10.2196/jmir.5774</a></p>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Connecting with Mental Health Professionals</title><link href="/2025/04/18/professional-locators.html" rel="alternate" type="text/html" title="Connecting with Mental Health Professionals" /><published>2025-04-18T00:00:00-05:00</published><updated>2025-04-18T00:00:00-05:00</updated><id>/2025/04/18/professional-locators</id><content type="html" xml:base="/2025/04/18/professional-locators.html"><![CDATA[<style>
   .hero-example--linear-gradient {
     background-image: linear-gradient(135deg, rgba(255, 69, 0, .5), rgba(255, 197, 0, .2)), url("path-to-image");
   }
@@ -19,45 +86,136 @@ I can’t make that decision for you, but I can try to answer questions you migh
   </div>
 </div>
 
-<h4 id="virtual-or-in-person">Virtual or In-person?</h4>
+<h4 id="benefits-of-therapy">Benefits of Therapy</h4>
 <hr />
+<p>Therapy is a treatment that aims to reduce emotional distress and improve some parts of life. In traditional forms of 
+psychotherapy, it involves recurring meetings with a mental health professional, where the patient and therapist work
+collaboratively to identify and improve the patient’s mental health concerns <a href="https://www.psychologytoday.com/us/basics/therapy">(Psychology Today, n.d.)</a>.</p>
 
-<p>[text]</p>
+<p><br />
+A <strong>common misconception</strong> is that therapy only helps people with “serious” mental health issues–that’s definitely not the case! 
+There’s a <em>vast amount</em> of things these professionals can provide help with. Here’s a few, just to scratch the surface:</p>
+<ul>
+  <li>Increasing life satisfaction, productivity, etc.</li>
+  <li>Loss, grief, and life transitions</li>
+  <li>Emotional and/or psychological pain</li>
+  <li>Dealing with and overcoming trauma</li>
+  <li>Physical symptoms (e.g., chronic pain, sleep disorders)</li>
+</ul>
 
-<h4 id="getting-the-most-out-of-therapy">Getting the most out of therapy</h4>
+<p><a href="https://www.centeredtherapychicago.com/what-are-common-issues-that-clients-address-in-therapy/"><em>If you’d like to see more, check out this link!</em></a></p>
+
+<p><br /></p>
+<h4 id="virtual-or-in-person-whats-the-difference">Virtual or In-person? What’s the difference?</h4>
 <hr />
+<p>Another <strong>common (<em>and understandable</em>) question</strong> is, “Would face-to-face therapy be ‘better’ than virtual therapy?” 
+Virtual therapy involes meeting your therapist online through a video-and-audio service, like Zoom, and has become 
+increasingly more popular, especially since COVID-19. The benefit of virtual therapy is that you can do it in the comfort
+of your own home, making it more accessible for people without access to transportation, and allowing you to reach therapists
+otherwise physically unavailable.</p>
 
-<p>[text]</p>
+<p>However, some individuals express concern that the virtual format may mean therapy is less effective than it would be in person.
+While it is true that some therapists find it’s somewhat harder to read nonverbal cues virtually, research has 
+found <strong>no significant difference in the effectiveness between virtual and in-person therapy <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9302910/">(Waite et al., 2022)</a>!</strong></p>
+
+<p><br /></p>
+<h4 id="what-types-of-professionals-are-there-and-what-do-they-do">What types of professionals are there, and what do they do?</h4>
+<hr />
+<p>While looking for the professional that works best for you, you’ll want to consider things like: training and education, what
+specializations they have, and your financial situation. Many professionals will take insurance, but if you don’t have 
+insurance, some services also provide sliding-scale payment options!</p>
+
+<p><br /></p>
+<ul>
+  <li>
+    <h6 id="psychiatrists-medical-doctors-with-psychiatric-training">Psychiatrists: Medical doctors with psychiatric training.</h6>
+  </li>
+</ul>
+<div class="mx-3">These professionals have a <strong>Doctor of Medicine (MD)</strong> or <strong>Doctor or Osteopathic Medicine (DO),</strong> 
+followed by a residency in psychiatry. On top of being able to diagnose mental health disorders and provide therapy, psychiatrists
+are able to prescribe and monitor medication for said disorders.</div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li>
+    <h6 id="psychologists-doctors-of-psychology">Psychologists: Doctors of Psychology</h6>
+  </li>
+</ul>
+<div class="mx-3"> These professionals possess a <strong>doctoral degree (PhD or PsyD) in Clinical, Counseling, School or 
+other fields of Psychology.</strong> PhDs (Doctor of Philosophy) and PsyDs (Doctor of Psychology) in psychology
+are both doctoral degrees, but differ in that PhDs are research-focused, whereas PsyDs are mroe oriented towards clinical practice.
+Psychologists can diagnose mental health disorders and provide therapy, but are <strong>not</strong> able to prescribe medication.</div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li>
+    <h6 id="licensed-professional-counselrs-lpcs-trained-masters-level-clinicians">Licensed Professional Counselrs (LPCs): Trained, Masters-level Clinicians</h6>
+  </li>
+</ul>
+<div class="mx-3"> LPCs are mental health professionals with a <strong>Masters-level degree in Psychology,</strong>
+and commonly specialize in specific subject areas (e.g., Marriage or Family Therapy, Substance Abuse). These professionals
+are also trained to identify (and <em>sometimes</em> diagnose) mental health conditions and provide therapy. The actual 
+title of an LPC can vary; you might see counselor, clinician, therapist, etc.</div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<ul>
+  <li>
+    <h6 id="licensed-clinical-social-workers-lcsws-masters-level-social-workers-w-therapeutic-training">Licensed Clinical Social Workers (LCSWs): Masters-level Social Workers w/ therapeutic training</h6>
+  </li>
+</ul>
+<div class="mx-3"> LCSWs are also trained to use therapeutic techniques to address mental health concerns. What differs 
+with social workers is that they typically have a <strong>Masters-level education related to social work,</strong> 
+meaning they're also trained in case management and advocacy. For social workers, their services and experience depend on 
+their specific certifications. </div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
 
 <p><br /></p>
 <h3 id="finding-a-professional">Finding a Professional:</h3>
 <hr />
 <h6 id="note-that-these-lists-will-not-be-exhaustive-or-cover-every-issue-if-you-have-suggestions-or-concerns-contact-me"><em>(Note that these lists will not be exhaustive or cover every issue. If you have suggestions or concerns, <a href="/about.html/">contact me.</a>)</em></h6>
 
-<p><a href="https://www.psychologytoday.com/us">Psychology Today</a></p>
-
-<p>Psycholog Today is…</p>
 <ul>
-  <li>Psychologists, psychiatrists, social workers?</li>
+  <li><em><a href="https://www.psychologytoday.com/us">Psychology Today</a>:</em></li>
 </ul>
+<div class="mx-3"><em>[description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
 
-<p><a href="https://locator.apa.org/?_gl=1*1q63g2q*_gcl_au*OTU5NTA2NzE0LjE3NDUwMTUzOTI.*_ga*MTY1Mjk5NDkyOS4xNzM1OTQ2NDgx*_ga_SZXLGDJGNB*MTc0NTAxNTM5Mi45LjAuMTc0NTAxNTM5My41OS4wLjA">APA’s Psychologist Locator</a><sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+<ul>
+  <li><em><a href="https://locator.apa.org/?_gl=1*1q63g2q*_gcl_au*OTU5NTA2NzE0LjE3NDUwMTUzOTI.*_ga*MTY1Mjk5NDkyOS4xNzM1OTQ2NDgx*_ga_SZXLGDJGNB*MTc0NTAxNTM5Mi45LjAuMTc0NTAxNTM5My41OS4wLjA">APA’s Psychologist Locator</a>:</em></li>
+</ul>
+<div class="mx-3"><em>[description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
 
-<p><em>description</em></p>
+<ul>
+  <li><em><a href="https://www.findapsychologist.org">Findapsychologist.org</a>:</em></li>
+</ul>
+<div class="mx-3"><em>[description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
 
-<p><a href="https://www.findapsychologist.org">Findapsychologist.org</a><sup id="fnref:1:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+<ul>
+  <li><em><a href="https://www.goodtherapy.org">GoodTherapy.org</a>:</em></li>
+</ul>
+<div class="mx-3"><em>[description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
 
-<p><em>description</em></p>
+<ul>
+  <li><em><a href="https://headway.co">Headway.co</a>:</em></li>
+</ul>
+<div class="mx-3"><em>[description]</em></div>
+<div class="margin-left: $spacer; margin-right: $spacer;"></div>
+
+<p><br /></p>
 
 <hr />
+<h6 id="references">References</h6>
 
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1">
-      <p>APA.org’s “How Do I Find a Good Therapist?” <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Other Resources</title><link href="/2025/04/18/other-resources.html" rel="alternate" type="text/html" title="Other Resources" /><published>2025-04-18T00:00:00-05:00</published><updated>2025-04-18T00:00:00-05:00</updated><id>/2025/04/18/other-resources</id><content type="html" xml:base="/2025/04/18/other-resources.html"><![CDATA[<h6 id="for-resources-that-dont-fit-neatly-into-the-other-categories-note-that-these-lists-will-not-be-exhaustive-or-cover-every-issue-if-you-have-suggestions-or-concerns-contact-me"><em>For resources that don’t fit neatly into the other categories. (Note that these lists will not be exhaustive or cover every issue. If you have suggestions or concerns, <a href="/about.html/">contact me.</a>)</em></h6>
+<p>Mayo Foundation for Medical Education and Research. (2023, April 14). How to find a good counselor or other mental health provider. Mayo Clinic. <a href="https://www.mayoclinic.org/diseases-conditions/mental-illness/in-depth/mental-health-providers/art-20045530">https://www.mayoclinic.org/diseases-conditions/mental-illness/in-depth/mental-health-providers/art-20045530</a></p>
+
+<p>Waite, M. R., Diab, S., &amp; Adefisoye, J. (2022). Virtual Behavioral Health Treatment Satisfaction and Outcomes Across Time. <em>Journal of patient-centered research and reviews, 9</em>(3), 158–165. <a href="https://doi.org/10.17294/2330-0698.1918">https://doi.org/10.17294/2330-0698.1918</a></p>
+
+<p>Why Everyone Can Benefit From Therapy. HealthCore Clinic. (2023, January 27). <a href="https://healthcoreclinic.org/2023/01/27/why-everyone-can-benefit-from-therapy">https://healthcoreclinic.org/2023/01/27/why-everyone-can-benefit-from-therapy</a></p>
+
+<p>Psychology Today. (n.d.). What Is Therapy? <a href="https://www.psychologytoday.com/us/basics/therapy">https://www.psychologytoday.com/us/basics/therapy</a></p>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Other Resources</title><link href="/2025/04/18/other-resources.html" rel="alternate" type="text/html" title="Other Resources" /><published>2025-04-18T00:00:00-05:00</published><updated>2025-04-18T00:00:00-05:00</updated><id>/2025/04/18/other-resources</id><content type="html" xml:base="/2025/04/18/other-resources.html"><![CDATA[<h6 id="for-resources-that-dont-fit-neatly-into-the-other-categories-note-that-these-lists-will-not-be-exhaustive-or-cover-every-issue-if-you-have-suggestions-or-concerns-contact-me"><em>For resources that don’t fit neatly into the other categories. (Note that these lists will not be exhaustive or cover every issue. If you have suggestions or concerns, <a href="/about.html/">contact me.</a>)</em></h6>
 <p><br /></p>
 
 <h2 id="informational-websites-and-resource-websites">Informational Websites and Resource Websites</h2>
@@ -71,17 +229,14 @@ I can’t make that decision for you, but I can try to answer questions you migh
 <h2 id="support-groups">Support Groups</h2>
 <hr />
 <h3 id="alcoholics-anonymous">Alcoholics Anonymous</h3>
-<p>[Description]</p>
 <ul>
   <li><a href="https://www.aa.org">Home website</a></li>
   <li><a href="https://www.aa.org/find-aa/north-america">Find an A.A near you</a>
     <h3 id="gablers-anonymous">Gablers Anonymous</h3>
-    <p>[Description]</p>
   </li>
   <li><a href="https://gamblersanonymous.org">Home website</a></li>
   <li><a href="https://gamblersanonymous.org/find-a-meeting/">Find a meeting</a>
     <h3 id="narcotics-anonymous">Narcotics Anonymous</h3>
-    <p>[Description]</p>
   </li>
   <li><a href="https://na.org">Home website</a></li>
   <li><a href="https://na.org/meetingsearch/">Find a group near you</a></li>
@@ -109,15 +264,15 @@ to provide immediate (or near immediate) mental health support. Phonelines are g
 <h4 id="crisis-hotlines">Crisis Hotlines</h4>
 <p>Hotlines are phonelines that primarily operate to keep you safe and connect you with resources in moments of crisis.
 Many of these are nation-wide, free, confidential, and available 24/7. For instance, the <a href="https://988lifeline.org/get-help/what-to-expect/">988 Suicide &amp; Crisis Lifeline</a>
-provides support 24/7, nation-wide, for a wide range of mental health struggles.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Additionally, there are also hotlines that
+provides support 24/7, nation-wide, for a wide range of mental health struggles <a href="https://988lifeline.org/">(988 Lifeline, n.d.)</a>. Additionally, there are also hotlines that
 specialize in specific content areas. (Find out more below!)
 <br /><br /></p>
 <h4 id="warmlines">Warmlines</h4>
 <p>Warmlines, unlike hotlines, are built primarily to allow you to talk with someone for mental health support. 
-However, these absolutely can still be used in moments of crisis.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
+However, these absolutely can still be used in moments of crisis <a href="https://screening.mhanational.org/content/need-talk-someone-warmlines/?layout=mhats,mhats4a">(Mental Health America, 2024)</a>.</p>
 
-<p>Warmline volunteers are not always licensed counselors;<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> sometimes, it may be community members or
-volunteers trained as empathetic listeners, ready to provide peer support. 
+<p>Warmline volunteers are not always licensed counselors <a href="https://www.psychiatry.org/news-room/apa-blogs/warm-lines-providing-help-before-a-crisis-develops#:~:text=A%20warm%20line%20is%20a,country%2C%20they%20are%20not%20uniform">(APA, 2020)</a>;
+sometimes, it may be community members or volunteers trained as empathetic listeners, ready to provide peer support. 
 It’s important to note these services are not always 24/7, and are more likely to be local, rather than national. 
 (Find out more below!)</p>
 
@@ -249,19 +404,12 @@ If you’d like to find more about those, you can check out:</p>
 <hr />
 <h6 id="references">References</h6>
 <h2 id="format-later">FORMAT LATER</h2>
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1">
-      <p><a href="https://988lifeline.org">988lifeline.org</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p><a href="https://screening.mhanational.org/content/need-talk-someone-warmlines/?layout=mhats,mhats4a">Mental Health America, <em>Need to talk to someone?</em></a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p><a href="https://www.psychiatry.org/news-room/apa-blogs/warm-lines-providing-help-before-a-crisis-develops#:~:text=A%20warm%20line%20is%20a,country%2C%20they%20are%20not%20uniform">APA, <em>Warm Lines: Providing Help Before a Crisis Develops</em></a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Web-based Interventions</title><link href="/jekyll/update/2025/04/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Web-based Interventions" /><published>2025-04-17T23:41:37-05:00</published><updated>2025-04-17T23:41:37-05:00</updated><id>/jekyll/update/2025/04/17/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/update/2025/04/17/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>988 lifeline. 988 Lifeline. (n.d.). <a href="https://988lifeline.org/">https://988lifeline.org/</a></p>
+
+<p>Need to talk to someone? (Warmlines). Mental Health America. (2024, May 6). <a href="https://screening.mhanational.org/content/need-talk-someone-warmlines/?layout=mhats%2Cmhats4a">https://screening.mhanational.org/content/need-talk-someone-warmlines/?layout=mhats%2Cmhats4a</a></p>
+
+<p>Warm lines: Providing help before a crisis develops. Psychiatry.org - Warm Lines: Providing Help Before a Crisis Develops. (2020, January 9). <a href="https://www.psychiatry.org/news-room/apa-blogs/warm-lines-providing-help-before-a-crisis-develops#:~:text=A%20warm%20line%20is%20a,country%2C%20they%20are%20not%20uniform">https://www.psychiatry.org/news-room/apa-blogs/warm-lines-providing-help-before-a-crisis-develops#:~:text=A%20warm%20line%20is%20a,country%2C%20they%20are%20not%20uniform</a></p>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Web-based Interventions</title><link href="/jekyll/update/2025/04/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Web-based Interventions" /><published>2025-04-17T23:41:37-05:00</published><updated>2025-04-17T23:41:37-05:00</updated><id>/jekyll/update/2025/04/17/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/update/2025/04/17/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>Jekyll requires blog post files to be named according to the following format:</p>
 
